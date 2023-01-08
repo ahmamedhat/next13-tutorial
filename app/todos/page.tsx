@@ -1,15 +1,12 @@
 import BackButton from "../components/BackButton";
+import TodosList from "./TodosList";
 
 const Todos = () => {
   return (
     <div>
       <BackButton />
-      <p className="text-blue-400">Todos</p>
-      <p className="text-blue-400">Todos</p>
-      <p className="text-blue-400">Todos</p>
-      <p className="text-blue-400">Todos</p>
-      <p className="text-blue-400">Todos</p>
-      <p className="text-blue-400">Todos</p>
+      {/* @ts-ignore */}
+      <TodosList />
     </div>
   );
 };
