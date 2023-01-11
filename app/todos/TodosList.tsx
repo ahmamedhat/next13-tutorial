@@ -16,10 +16,10 @@ const TodosList = async () => {
     <div className="my-8">
       {todos.map((todo) => {
         return (
-          <>
-            <TodoComponent key={todo.id} todo={todo} />;
+          <div key={todo.id + todo.userId}>
+            <TodoComponent todo={todo} />;
             <br />
-          </>
+          </div>
         );
       })}
     </div>

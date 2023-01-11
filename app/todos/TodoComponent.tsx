@@ -7,7 +7,7 @@ const TodoComponent = (props: any) => {
 
   return (
     <div
-      key={todo.id}
+      key={todo.id + todo.userId}
       onClick={() => setIsChecked(!isChecked)}
       className="text-white h-16 inline-block cursor-pointer"
     >
