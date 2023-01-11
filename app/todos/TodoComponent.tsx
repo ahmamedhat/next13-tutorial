@@ -1,15 +1,19 @@
 "use client";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Todo } from "../../typings";
 const TodoComponent = (props: any) => {
   const todo: Todo = props.todo;
   const [isChecked, setIsChecked] = useState(todo.completed);
-
+  const router = useRouter();
   return (
     <div
       key={todo.id + todo.userId}
-      onClick={() => setIsChecked(!isChecked)}
-      className="text-white h-16 inline-block cursor-pointer"
+      onClick={() => {
+        router.push("todos/" + todo.id);
+        setIsChecked(!isChecked);
+      }}
+      className="text-white h-14 inline-block cursor-pointer"
     >
       <div className="flex items-center space-x-4 relative cursor-pointer">
         {isChecked && (
